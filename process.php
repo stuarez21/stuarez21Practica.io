@@ -121,7 +121,7 @@ function request($items, $total,$iva,$totaTarifa12,$totalBase0,$email, $primer_n
 		'Authorization:Bearer '.$_SESSION['autorizador']));
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);// this should be set to true in production
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);// this should be set to true in production
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	$responseData = curl_exec($ch);
 	if(curl_errno($ch)) {
@@ -152,7 +152,7 @@ $json = json_decode($responseData, true);
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="EN" xml:lang="en"></html>
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -169,7 +169,7 @@ $json = json_decode($responseData, true);
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<img src="../imagenes/logo-datafast.png">
+			<img src="../imagenes/logo-datafast.png" alt "image description">
 		</div>
 		<div class="col-md-12">
 		<h1>Portal de compras</h1>
