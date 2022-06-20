@@ -152,6 +152,7 @@ $json = json_decode($responseData, true);
 
 ?>
 <!DOCTYPE html>
+<title>Process</title>
 <html lang="EN" xml:lang="en"></html>
 <head>
 	<title></title>
