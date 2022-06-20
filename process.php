@@ -170,7 +170,7 @@ $json = json_decode($responseData, true);
 		<!-- <img src="../imagenes/marcas.png"> -->
 		</div>
 	</div>
-	<p>Powered by <a href="http://www.datafast.com.ec/" target="_blank">Datafast</a></p>	
+	<p>Powered by <a href="http://www.datafast.com.ec/" target="_blank" rel="noopener">>Datafast</a></p>	
 	</div>
 </div>
 </body>
