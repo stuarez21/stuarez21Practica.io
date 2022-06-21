@@ -44,8 +44,7 @@ $_SESSION['merchterm'] = $merchterm;
 	$_SESSION['autorizador'] =  "OGE4Mjk0MTg1YTY1YmY1ZTAxNWE2YzhjNzI4YzBkOTV8YmZxR3F3UTMyWA==";
 
 
-function request($items, $total,$iva,$totaTarifa12,$totalBase0,$email, $primer_nombre, $segundo_nombre, $apellido, $cedula, $trx,$ip_address, $finger,$merchterm,
-	$telefono, $direccion_cliente, $pais_cliente, $direccion_entrega, $pais_entrega) {
+function request($items, $total,$iva,$totaTarifa12,$totalBase0,$email, $primer_nombre) {
 	$finger = urlencode($finger);
 	$i = 0;
 	$url = "https://test.oppwa.com/v1/checkouts";
@@ -78,14 +77,7 @@ function request($items, $total,$iva,$totaTarifa12,$totalBase0,$email, $primer_n
 		"&customParameters[SHOPPER_VERSIONDF]=2".
 		"&customParameters[".$merchterm."]=00810030070103910004012".$valueIva."05100817913101052012".$valueTotalBase0."053012".$valueTotalIva;
 		
-	/*foreach ($items["cart"] as $c) {
-		
-		$data.= "&cart.items[".$i."].name=".$c["product_name"];
-		$data.= "&cart.items[".$i."].description="."Descripcion: ".$c["product_name"];
-		$data.= "&cart.items[".$i."].price=".$c["product_price"];
-		$data.= "&cart.items[".$i."].quantity=".$c["q"];		
-		$i++;
-	}*/
+	
 	
 	$data .="&testMode=EXTERNAL";	
 	$ch = curl_init();
